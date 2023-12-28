@@ -16,6 +16,8 @@ jobs:
         with:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Output contents
+        run: ls
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
@@ -32,6 +34,8 @@ jobs:
         with:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Output contents
+        run: ls
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
@@ -56,6 +60,8 @@ jobs:
         with:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Output contents
+        run: ls
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
