@@ -17,7 +17,7 @@ jobs:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Output contents
-        run: ls
+        run: ls -a
       - name: Install dependencies
         run: npm ci
       - name: Lint code
@@ -34,7 +34,7 @@ jobs:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Output contents
-        run: ls
+        run: ls -a
       - name: Install dependencies
         run: npm ci
       - name: Test code
@@ -59,7 +59,7 @@ jobs:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Output contents
-        run: ls
+        run: ls -a
       - name: Install dependencies
         run: npm ci
       - name: Build website
