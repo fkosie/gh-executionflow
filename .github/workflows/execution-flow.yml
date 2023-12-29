@@ -16,10 +16,12 @@ jobs:
         with:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
-      - name: Output contents
+      - name: Output contents 1
         run: ls -a
       - name: Install dependencies
         run: npm ci
+      - name: Output contents 2
+        run: ls -a
       - name: Lint code
         run: npm run lint
   test:
@@ -33,10 +35,12 @@ jobs:
         with:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
-      - name: Output contents
+      - name: Output contents 1
         run: ls -a
       - name: Install dependencies
         run: npm ci
+      - name: Output contents 2
+        run: ls -a
       - name: Test code
         id: run-tests
         run: npm run test
@@ -58,10 +62,12 @@ jobs:
         with:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
-      - name: Output contents
+      - name: Output contents 1
         run: ls -a
       - name: Install dependencies
         run: npm ci
+      - name: Output contents 2
+        run: ls -a
       - name: Build website
         id: build-website
         run: npm run build
